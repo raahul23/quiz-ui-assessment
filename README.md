@@ -1,78 +1,85 @@
-# 🎯 Frontend Developer Assignment – Quiz UI
+🎯 Frontend Developer Assignment – Quiz UI
 
-A clean, modern, and fully responsive **Quiz Application UI** built using **React, TypeScript, and Vite**.  
-This project includes a multi-step progress tracker, smooth animations, accessibility features, and a polished result screen — closely matching the provided Figma/PDF design.
+A clean, modern, and fully responsive Quiz Application UI built using React, TypeScript, and Vite.
+This project closely follows the provided Figma/PDF design with smooth transitions, premium UI, and an engaging user workflow.
 
----
+🔗 Live Demo
 
+👉 https://quiz-ui-assessment.vercel.app/
 
+(Best viewed on desktop for the full UI experience.)
 
-## 📂 Features
+📸 Preview (Optional: Add Screenshot)
 
-### ✅ **Start Screen**
-- Elegant title & subtitle typography  
-- Paw icon & speech bubble decorative UI  
-- Start button with gradient + hover animations  
+You can upload a screenshot and embed here later.
 
-### ✅ **Quiz Flow**
-- Multi-step progress bar with animated fill  
-- Smooth knob movement  
-- Keyboard navigation support  
-  - Arrow keys → Prev/Next  
-  - Number keys → Select option  
-  - Enter/Space → Confirm option  
-- Auto-advance to next question  
-- Reduced-motion support (accessibility)
+![Quiz Preview](./preview.png)
 
-### ✅ **Questions**
-- Clean card UI  
-- Hover effects  
-- Selected-state highlight  
-- Responsive layout  
+📂 Features
+🚀 Start Screen
 
-### ✅ **Result Screen**
-- Smooth fade-in animation  
-- Large serif percentage display  
-- Encouraging message  
-- Restart button  
+Elegant gradient container
 
----
+Paw icon + speech bubble for friendly UX
 
-## 🧰 Tech Stack
+Smooth glowing Start button
 
-| Technology | Purpose |
-|-----------|---------|
-| **React** | Core UI |
-| **TypeScript** | Strong typing, reliability |
-| **Vite** | Fast dev server + bundler |
-| **Tailwind / Custom CSS** | UI styling |
-| **GitHub** | Version control |
+📝 Quiz Flow
 
----
+Multi-step progress indicator with animation
 
-## 📦 Installation & Setup
+Smooth transitions between questions
 
-### 1️⃣ Clone the repository
-```bash
+Keyboard navigation
+
+1–4 → Choose option
+
+← → → Navigate
+
+Enter → Next
+
+Accessible (reduced motion support)
+
+🧠 Questions
+
+Clean cards with hover animation
+
+Selected-state highlight
+
+Fully responsive layout
+
+🎉 Result Screen
+
+Big percentage typography
+
+Encouraging summary
+
+Bold Start Again button
+
+Smooth fade-in effect
+
+🧰 Tech Stack
+Technology	Purpose
+React	UI logic
+TypeScript	Strong typing
+Vite	Fast bundler/devserver
+Tailwind + Custom CSS	Styling & animations
+Vercel	Deployment
+📦 Installation & Setup
+1️⃣ Clone the repository
 git clone https://github.com/raahul23/quiz-ui-assessment.git
 cd quiz-ui-assessment
+
 2️⃣ Install dependencies
-bash
-Copy code
 npm install
+
 3️⃣ Run the development server
-bash
-Copy code
 npm run dev
+
 4️⃣ Build for production
-bash
-Copy code
 npm run build
-This generates a dist folder with optimized output.
 
 📁 Project Structure
-css
-Copy code
 src/
  ├─ components/
  │    ├─ Quiz.tsx
@@ -80,23 +87,60 @@ src/
  │    ├─ Result.tsx
  │    ├─ ProgressBar.tsx
  │    ├─ Header.tsx
- │    └─ ...
+ │    └─ Announcer.tsx
  ├─ data/questions.ts
  ├─ index.css
  ├─ App.tsx
  └─ main.tsx
+
 🧪 How It Works
-Quiz.tsx manages quiz logic, step tracking, and navigation
+🎛 State & Navigation
 
-Result.tsx shows the final percentage score
+Quiz.tsx handles quiz state
 
-questions.ts holds question/option data
+Auto-advances on selection
 
-index.css contains all custom UI styling, animations, and layout rules
+Jump to next/previous question
 
-🎨 Design System
-Typography: Playfair Display (titles), Inter (body)
+📘 Questions Data
 
-Colors: Blue gradients, soft whites, subtle shadows
+Array of objects with:
 
-Components: Rounded cards, animated buttons, premium segment indicator
+{
+  question: string,
+  options: string[],
+  answer: number
+}
+
+🎨 Custom UI
+
+Blurred gradient backgrounds
+
+Soft shadows
+
+Large serif headings
+
+Smooth transitions on every step
+
+🧾 Submission Ready Checklist
+
+✔ Fully responsive
+✔ All questions flow correctly
+✔ Progress indicator works
+✔ Result screen calculates accurately
+✔ Design matches assignment
+✔ Clean repo on GitHub
+✔ Live demo on Vercel
+✔ Build ready (dist/)
+
+🙌 Author
+
+Raahul
+Frontend Developer
+GitHub: https://github.com/raahul23
+
+Live Demo: https://quiz-ui-assessment.vercel.app/
+
+📜 License
+
+This project is for evaluation purposes.
