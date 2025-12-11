@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# 🎯 Frontend Developer Assignment – Quiz UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern, and fully responsive **Quiz Application UI** built using **React, TypeScript, and Vite**.  
+This project includes a multi-step progress tracker, smooth animations, accessibility features, and a polished result screen — closely matching the provided Figma/PDF design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo (Optional)
+If deployed:
 
-## React Compiler
+👉 https://your-live-link.netlify.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*(Replace with your actual link if you deploy.)*
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### ✅ **Start Screen**
+- Elegant title & subtitle typography  
+- Paw icon & speech bubble decorative UI  
+- Start button with gradient + hover animations  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### ✅ **Quiz Flow**
+- Multi-step progress bar with animated fill  
+- Smooth knob movement  
+- Keyboard navigation support  
+  - Arrow keys → Prev/Next  
+  - Number keys → Select option  
+  - Enter/Space → Confirm option  
+- Auto-advance to next question  
+- Reduced-motion support (accessibility)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### ✅ **Questions**
+- Clean card UI  
+- Hover effects  
+- Selected-state highlight  
+- Responsive layout  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### ✅ **Result Screen**
+- Smooth fade-in animation  
+- Large serif percentage display  
+- Encouraging message  
+- Restart button  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **React** | Core UI |
+| **TypeScript** | Strong typing, reliability |
+| **Vite** | Fast dev server + bundler |
+| **Tailwind / Custom CSS** | UI styling |
+| **GitHub** | Version control |
+
+---
+
+## 📦 Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/raahul23/quiz-ui-assessment.git
+cd quiz-ui-assessment
+2️⃣ Install dependencies
+bash
+Copy code
+npm install
+3️⃣ Run the development server
+bash
+Copy code
+npm run dev
+4️⃣ Build for production
+bash
+Copy code
+npm run build
+This generates a dist folder with optimized output.
+
+📁 Project Structure
+css
+Copy code
+src/
+ ├─ components/
+ │    ├─ Quiz.tsx
+ │    ├─ QuestionCard.tsx
+ │    ├─ Result.tsx
+ │    ├─ ProgressBar.tsx
+ │    ├─ Header.tsx
+ │    └─ ...
+ ├─ data/questions.ts
+ ├─ index.css
+ ├─ App.tsx
+ └─ main.tsx
+🧪 How It Works
+Quiz.tsx manages quiz logic, step tracking, and navigation
+
+Result.tsx shows the final percentage score
+
+questions.ts holds question/option data
+
+index.css contains all custom UI styling, animations, and layout rules
+
+🎨 Design System
+Typography: Playfair Display (titles), Inter (body)
+
+Colors: Blue gradients, soft whites, subtle shadows
+
+Components: Rounded cards, animated buttons, premium segment indicator
