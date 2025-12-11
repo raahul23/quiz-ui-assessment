@@ -5,14 +5,7 @@ This project includes a multi-step progress tracker, smooth animations, accessib
 
 ---
 
-## 🚀 Live Demo (Optional)
-If deployed:
 
-👉 https://your-live-link.netlify.app
-
-*(Replace with your actual link if you deploy.)*
-
----
 
 ## 📂 Features
 
