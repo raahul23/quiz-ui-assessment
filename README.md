@@ -9,12 +9,6 @@ This project closely follows the provided Figma/PDF design with smooth transitio
 
 (Best viewed on desktop for the full UI experience.)
 
-📸 Preview (Optional: Add Screenshot)
-
-You can upload a screenshot and embed here later.
-
-![Quiz Preview](./preview.png)
-
 📂 Features
 🚀 Start Screen
 
