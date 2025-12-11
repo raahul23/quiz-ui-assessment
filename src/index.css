@@ -1,0 +1,305 @@
+/* ----------------------------------------------
+   GLOBAL RESET + FONTS
+---------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Inter, sans-serif;
+  background: linear-gradient(180deg, #e9f5ff 0%, #f5fbff 100%);
+  min-height: 100vh;
+  color: #0f1c2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------------------------
+   QUIZ PAGE LAYOUT
+---------------------------------------------- */
+.quiz-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.quiz-frame {
+  background: white;
+  max-width: 1100px;
+  width: 90%;
+  padding: 40px 40px 60px;
+  border-radius: 24px;
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.05),
+    0 10px 40px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+/* ----------------------------------------------
+   TITLES & TEXT
+---------------------------------------------- */
+.quiz-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #0f253f;
+}
+
+.quiz-sub {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #506b87;
+}
+
+/* ----------------------------------------------
+   PREMIUM SEGMENT BAR
+---------------------------------------------- */
+.stepbar {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin: 24px 0;
+}
+
+.step {
+  position: relative;
+  width: 200px;
+  height: 6px;
+  background: rgba(120, 170, 255, 0.20);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.step .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0a77ff, #4fa3ff);
+  border-radius: 6px;
+  transition: width 0.45s ease-in-out;
+}
+
+.step .knob {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: #0a77ff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: left 0.45s ease-in-out, opacity 0.3s ease;
+  opacity: 0;
+  box-shadow: 0 8px 20px rgba(10, 119, 255, 0.18);
+  border: 3px solid rgba(255,255,255,0.95);
+}
+
+.step .knob[data-show='1'] {
+  opacity: 1;
+}
+
+/* Responsive stepbar */
+@media (max-width: 1200px) {
+  .step { width: 150px; }
+  .stepbar { gap: 18px; }
+}
+
+/* ----------------------------------------------
+   QUIZ CARD AREA
+---------------------------------------------- */
+.quiz-card {
+  background: white;
+  padding: 30px 30px;
+  border-radius: 18px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.05),
+    0 10px 25px rgba(0,0,0,0.06);
+}
+
+.quiz-question {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: #0f283b;
+}
+
+/* ----------------------------------------------
+   OPTIONS LIST
+---------------------------------------------- */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: #f6fbff;
+  border: 1.6px solid #e6f1ff;
+  text-align: left;
+  font-size: 17px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  background: #eef6ff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.option-btn.selected {
+  background: #e8f1ff;
+  border-color: #0a77ff;
+  box-shadow:
+    0 12px 24px rgba(10, 119, 255, 0.15),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.option-index {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e6eeff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #39506a;
+}
+
+/* ----------------------------------------------
+   NAV BUTTONS
+---------------------------------------------- */
+.quiz-nav {
+  margin-top: 28px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: #f2f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  color: #0c3b63;
+  transition: all .2s ease;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.05),
+    0 6px 18px rgba(0,0,0,0.08);
+}
+
+.nav-btn:hover {
+  background: #e3f1ff;
+  transform: translateY(-2px);
+}
+
+.nav-btn.is-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------
+   START BUTTON
+---------------------------------------------- */
+.quiz-start-btn {
+  background: linear-gradient(180deg, #146aff, #0254d4);
+  padding: 12px 34px;
+  color: white;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease;
+  box-shadow: 0 5px 18px rgba(27, 113, 255, 0.35);
+}
+
+.quiz-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(27, 113, 255, 0.45);
+}
+
+/* ----------------------------------------------
+   RESULT SCREEN
+---------------------------------------------- */
+.result-wrap {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.result-title {
+  font-size: 40px;
+  margin-top: 12px;
+  font-family: "Playfair Display", serif;
+  color: #173c55;
+}
+
+.result-pct {
+  font-family: "Playfair Display", serif;
+  font-size: 110px;
+  margin-top: 10px;
+  color: #054c63;
+}
+
+/* ----------------------------------------------
+   RESULT BUTTON
+---------------------------------------------- */
+.result-btn {
+  padding: 12px 32px;
+  background: linear-gradient(180deg, #1c7aff, #055bd1);
+  border-radius: 14px;
+  font-size: 17px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all .2s ease;
+  box-shadow: 0 4px 20px rgba(10, 89, 255, 0.35);
+}
+
+.result-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(10, 89, 255, 0.45);
+}
+
+/* ----------------------------------------------
+   PAW STICKER + SPEECH BUBBLE
+---------------------------------------------- */
+.paw-sticker {
+  width: 100px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+
+.paw-speech {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  background: white;
+  padding: 8px 18px;
+  border-radius: 12px;
+  border: 2px solid #e3f0ff;
+  font-size: 15px;
+  color: #466783;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+/* hide paw on mobile */
+@media (max-width: 700px) {
+  .paw-sticker,
+  .paw-speech { display: none; }
+}
